@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table>
+                <th>No</th>
+                <th>Nombre</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Somme</th>
+                <script>
+                    let nbLigne = 0;
+                    let nombreObtenu = parseInt(prompt("Donnez un nombre : "));
+                    let minimum = nombreObtenu;
+                    let maximum = nombreObtenu;
+                    let nombrePrecedent = 0;
+                    while(isFinite(nombreObtenu)){
+                        nbLigne += 1;
+                        minimum = nombreObtenu <= minimum ? nombreObtenu : minimum;
+                        maximum = nombreObtenu >= maximum ? nombreObtenu : maximum;
+                        let somme = nombrePrecedent + nombreObtenu; 
+                        document.write("<tr>"+ afficherValeur(nbLigne) + afficherValeur(nombreObtenu) + afficherValeur(minimum) + afficherValeur(maximum) + afficherValeur(somme) + "</tr>");
+                        nombrePrecedent = somme;
+                        nombreObtenu = parseInt(prompt("Donnez un nombre : "));
+                    }
+
+                    function afficherValeur(nombre){
+                        return nombre >= 0 ? "<td class='positif'>"+ nombre +"</td>" : "<td class='negatif'>"+ nombre +"</td>";
+                    }
+                </script>
+        </table>
+    </body>
+</html>
