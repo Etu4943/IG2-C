@@ -14,6 +14,11 @@
                 <script>
                     let nbLigne = 0;
                     let nombreObtenu = parseInt(prompt("Donnez un nombre : "));
+                    /*
+                    Le problème dont fait mention le labo vient du fait qu'un prompt renvoi une chaine de caractère. 
+                    Et qu'un '+' ferait office de concaténation.
+                    Il faut donc modifier l'input du prompre pour en faire un chiffre (parseInt).
+                    */
                     let minimum = nombreObtenu;
                     let maximum = nombreObtenu;
                     let nombrePrecedent = 0;
