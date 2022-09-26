@@ -10,7 +10,7 @@ function affichageNombreObtenu(){
 }
 function tableMutliplication(){
     for(let iAge = 1 ; iAge <=10 ; iAge ++){
-        document.write("<tr><td>"+ nombreObtenu + "</td> <td>" + iAge + "</td> <td>" + nombreObtenu * iAge + "</td></tr>");
+        document.write(`<tr><td>${nombreObtenu}</td> <td>${iAge}</td> <td>${nombreObtenu * iAge}</td></tr>`);
     }
 }
 
