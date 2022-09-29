@@ -1,0 +1,33 @@
+cours js :
+
+hoisting = hissage
+
+La portée :
+	- la durée de vie
+	- inner scope : scope dans un scope. 
+	- Chaque scope correspond à un bloc d'accolades
+
+les déclarations : 
+	- PAS de déclaration avec VAR et RIEN
+	- TOUJOURS LET ou CONST
+
+1) pas de déclaration (msg = "hello") : 
+	- C'est global, même si on la met dans un scope.
+	- 
+2) déclaration LET (let msg = "hello") :
+	- Variable local au scope du BLOC
+		- Ou global si on la déclare pas dans un scope
+
+3) Déclaration CONST (const msg = "hello") :
+	- Local au scope du BLOC ou global, comme un let.
+	- A la différence qu'un const requière toujours une valeur à l'initialisation !!!
+
+4) Déclaration VAR (var msg = "hello") : 
+	- local au scope de la fonction !!
+	
+
+
+Le hissage : 
+	- Lors d'une déclaration avec VAR, leur scope sont hissé 
+	- UNIQUEMENT la déclaration est hissé, pas l'INITIALISATION
+	- La TEMPORAL DEAD ZONE c'est la zone entre la déclaration codé et là où le code va se hisser. C'est la zone où la variable n'est pas accessible. // Question d'Examen !
