@@ -19,8 +19,8 @@
                     let nombrePrecedent = 0;
                     while(isFinite(nombreObtenu)){
                         nbLigne += 1;
-                        minimum = nombreObtenu <= minimum ? nombreObtenu : minimum;
-                        maximum = nombreObtenu >= maximum ? nombreObtenu : maximum;
+                        minimum = Math.min(nombreObtenu, minium); //nombreObtenu <= minimum ? nombreObtenu : minimum;
+                        maximum = Math.max(nombreObtenu, maximum); // nombreObtenu >= maximum ? nombreObtenu : maximum;
                         let somme = nombrePrecedent + nombreObtenu; 
                         document.write("<tr>"+ afficherValeur(nbLigne) + afficherValeur(nombreObtenu) + afficherValeur(minimum) + afficherValeur(maximum) + afficherValeur(somme) + "</tr>");
                         nombrePrecedent = somme;
