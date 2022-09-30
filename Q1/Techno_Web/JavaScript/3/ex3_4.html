@@ -1,0 +1,31 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Log de travail</h1>
+    <script>
+        let reponseObtenue = prompt("Donnez un nom de dossier : ");
+        let tabDossier = [];
+        while(reponseObtenue != null){
+            console.log(`reponse = ${typeof(reponseObtenue)}`)
+                if(reponseObtenue != ""){
+                    tabDossier[tabDossier.length] = reponseObtenue;
+                    document.write(`Nouveau dossier : ${reponseObtenue} - actuellement : ${tabDossier.length} dossier(s) dans la pile</br>`);
+                }else
+                    if(tabDossier.length == 0)
+                        document.write("Plus de dossier dans la pile !");
+                    else{
+                        reponseObtenue = tabDossier[tabDossier.length-1];
+                        tabDossier.pop();
+                        document.write(`Dossier traité : ${reponseObtenue} - reste : ${tabDossier.length-1} dossier(s) dans la pile</br>`);
+                    }
+            reponseObtenue = prompt("Donnez un nom de dossier : ");
+            }
+
+            
+
+    </script>
+  </body>
+</html>
