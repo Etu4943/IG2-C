@@ -1,0 +1,39 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta charset="UTF8" />
+    <link rel="stylesheet" href="TW.css" />
+    <script src="TW.js">
+    </script>
+    <script>
+       window.onload = ajouteNumCode;
+    </script>
+  </head>
+  <body>
+    <h1>Technologies web (Javascript)</h1>
+    <h2>Atelier 5, exercice 4, étape 4</h2>
+
+    <h3>Version utilisant pop et push</h3>
+
+  	<pre><code>
+let pile = [];
+let dossier = prompt("Nom du dossier ?");
+while (dossier != null) {
+  if (dossier !== "") {     
+    document.write(`<p>Nouveau dossier : ${dossier} - actuellement :
+                    ${pile.push(dossier)} dossier(s) dans la pile</p>`);
+  } else {
+    if (pile.length == 0) {
+      document.write(`<p>Plus de dossier dans la pile ! </p>`);
+    } else {
+      document.write(`<p>Dossier en cours : ${pile.pop(dossier)} - actuellement :
+                      ${pile.length} dossier(s) dans la pile</p>`);
+    }
+  }
+  dossier = prompt("Nom du dossier ?");
+}
+
+		</code></pre>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta charset="UTF8" />
+    <link rel="stylesheet" href="TW.css" />
+    <script src="TW.js">
+    </script>
+    <script>
+       window.onload = ajouteNumCode;
+    </script>
+  </head>
+  <body>
+    <h1>Technologies web (Javascript)</h1>
+    <h2>Atelier 5, exercice 1, étape 7</h2>
+
+    <h3>Version utilisant la syntaxe standard</h3>
+
+  	<pre><code>
+function sortir (txt) {
+  console.log(txt);
+}
+
+function citeNFois (chaine, nbr) {
+  nbr = Number(nbr);
+  if (!isFinite(nbr) || nbr < 0) {
+    sortir("Le deuxième argument doit être un nombre positif");
+    return;
+  } 
+  for (let i = 1; i <= nbr; i++) {
+    sortir(`${i}) ${chaine}`);
+  }
+}
+		</code></pre>
+
+		<h3>Version utilisant la syntaxe orienté objet</h3>
+
+		<pre><code>
+const sortir = new Function ("txt", 'console.log(txt)');
+
+const citeNFois = new Function ("chaine", "nbr", 
+  `nbr = Number(nbr);
+   if (!isFinite(nbr) || nbr < 0) {
+     sortir('Le deuxième argument doit être un nombre positif');
+     return;
+   }
+   for (let i = 1; i <= nbr; i++) {
+     sortir(i + ") " + chaine);
+   }`
+);
+		</code></pre>
+
+  </body>
+</html>
