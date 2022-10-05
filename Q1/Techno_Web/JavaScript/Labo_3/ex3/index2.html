@@ -1,0 +1,183 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            .réussite, .échec { 
+                text-align: center; 
+            }
+            .réussite { 
+                color: blue; 
+            }
+            .échec { 
+                color: red; 
+            }
+            table { 
+                border-collapse: collapse; 
+            }
+            th { 
+                background-color: black; color: lightgrey; padding: 4px; 
+            }
+            td { 
+                padding: 4px; 
+            }
+            tr.moyennes { 
+                background-color: lightgray; 
+            }
+        </style>
+        <script>
+            let tabCours = [];
+            let nomCours = {
+                math: "Math",
+                pp: "PP",
+                c: "Langage C",
+                oed: "OED",
+                ppoo: "PP orienté objet",
+                java: "Java",
+                mtd: "MTD"
+            }
+            let cotes1 = [
+                {
+                    nom: "Bergamotte", 
+                    groupe: "A",
+                    cotes: {math: 12, pp: 17, c: 14} 
+                },
+                {
+                    nom: "Archibald", 
+                    groupe: "C",
+                    cotes: {pp: 9, c: 10} 
+                },
+                {   
+                    nom: "Cunégonde", 
+                    groupe: "D",
+                    cotes: {math: 7, c: 11} 
+                },
+                {   nom: "Diomède", 
+                    groupe: "B",
+                    cotes: {pp: 15} 
+                },
+                {
+                    nom: "Garibald", 
+                    groupe: "A",
+                    cotes: {pp: 3, math: 5} 
+                },
+                {
+                    nom: "Félix", 
+                    groupe: "D",
+                    cotes: {c: 10} 
+                },
+            ];
+            let cotes2 = [
+                {
+                    nom: "Hubertine", 
+                    groupe: "A",
+                    cotes: {mtd: 15, java: 12} 
+                },
+                {
+                    nom: "Isidore", 
+                    groupe: "D",
+                    cotes: {oed: 5, ppoo: 7, java: 6} 
+                },
+                {
+                    nom: "Jacynthe", 
+                    groupe: "B",
+                    cotes: {mtd: 12, ppoo: 3, oed: 11} 
+                },
+                {
+                    nom: "Kerrouko", 
+                    groupe: "C",
+                    cotes: {java: 5, ppoo: 7, mtd: 13} 
+                },
+                {
+                    nom: "Lucienne", 
+                    groupe: "C",
+                    cotes: {java: 18, oed: 16, mtd: 18} 
+                },
+                {
+                    nom: "Mathilde", 
+                    groupe: "A",
+                    cotes: {ppoo: 4, java: 9, mtd: 8} 
+                },
+            ];
+        
+            function afficheCotes(tableauEtudiants){
+                enregistrementsCours(tableauEtudiants);
+                document.write(`<table>
+                                    <tr>
+                                        <th>Etudiant</th>
+                                        <th>Grp</th>
+                                        ${afficherLigneTitre()}
+                                    <tr>
+                                    ${ligneEtudiant(tableauEtudiants)}
+                                    <tr class="moyennes">
+                                        <td>Moyennes</td>
+                                        <td></td>
+                                        ${ligneMoyenne()}
+                                    </tr>
+                                        
+                                </table>`);   
+            }
+
+            function enregistrementsCours(tableauEtudiants){
+                tabCours = [];
+                for(let etudiant of tableauEtudiants)
+                    for(let cours in etudiant.cotes)
+                        tabCours[cours] = 0;
+            }
+
+            function afficherLigneTitre(){
+                let ligne = "";
+                for(let element in tabCours){
+                    ligne += `<th>${nomCours[element]}</th>`;
+                }
+                    
+                return ligne;
+            }
+
+            function ligneEtudiant(tableauEtudiants){
+                let ligneEtudiant = "";
+                for(let etudiant of tableauEtudiants){
+                    ligneEtudiant += `<tr>
+                                        <td>${etudiant.nom}</td>
+                                        <td>${etudiant.groupe}</td>
+                                        ${ligneCoteCours(etudiant)}
+                                    </tr>`
+                }
+                return ligneEtudiant; 
+                 
+            }
+
+            function ligneCoteCours(etudiant){
+                let ligneCotes = "";
+                for(let cours in tabCours){
+                    let noteExiste = etudiant.cotes[cours] !== undefined;
+                    if(noteExiste)
+                        tabCours[cours] += 1000 + etudiant.cotes[cours]; 
+                    let note = noteExiste ? etudiant.cotes[cours] : ``;
+                    ligneCotes += insererClasseNote(note);
+                }
+                return ligneCotes;
+            }
+
+            function ligneMoyenne(){
+                let ligne = "";
+                for(let note in tabCours){ // problème avec la boucel for_of 
+                    let diviseur = Math.floor(tabCours[note]/1000);
+                    let dividande = Math.floor(tabCours[note]%1000)
+                    ligne += insererClasseNote(Math.round(dividande/diviseur));
+                }
+                return ligne;      
+            }
+
+            function insererClasseNote(note){
+                return `<td class=${note < 10 ? `échec` : `réussite`}>${note}</td>`
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            afficheCotes(cotes1);
+            afficheCotes(cotes2);
+        </script>
+    </body>
+</html>
