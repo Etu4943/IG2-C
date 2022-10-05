@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="titre">Titre de cette page</h1>
+        <p id="para">Paragraphe de cette page</p>
+        <script>
+            let elem = {
+                cible : titreHTML,
+                changerTexte(txt){
+                    this.cible.innerHTML = txt;
+                },
+                ajouterText(txt){
+                    this.cible.innerHTML += txt;
+                },
+                changerFond(col){
+                    this.cible.style.backgroundColor = col;
+                    this.cible.innerHTML = `La couleur est desormais ${col}`;
+                },
+                changerCouleur(col){
+                    this.ancienneCouleur = this.couleurActuelle;
+                    this.couleurActuelle = col;
+                    this.cible.style.color = col;
+                },
+                retourCouleur(){
+                    this.changerCouleur(this.ancienneCouleur);
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            body{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .portrait{
+                display: flex;
+                flex-direction: column;
+                background-color:lemonchiffon;
+                align-items: center;
+                margin: 0px 20px 20px 0;
+                min-width: 230px;
+                padding: 10px;
+                border: 1px solid blue;
+            }
+
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-height: 200px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <script>
+            let musiciens = [
+                        { 
+                            nom: "Mozart", prénom: "Wolfgang Amadeus", image: "WAMozart.jpg",
+                            naissance: {jour: 27, mois: 1, année: 1756},
+                            mort: {jour: 5, mois: 12, année: 1791} 
+                        },
+                        { 
+                            nom: "Bach", prénom: "Johann Sebastian", image: "JSBach.jpg",
+                            naissance: {jour: 31, mois: 3, année: 1685},
+                            mort: {jour: 28, mois: 7, année: 1750} 
+                        },
+                        { 
+                            nom: "Vivaldi", prénom: "Antonio Lucio", image: "Vivaldi.jpg",
+                            naissance: {jour: 4, mois: 3, année: 1678},
+                            mort: {jour: 28, mois: 7, année: 1741} 
+                        },
+                        { 
+                            nom: "Ravel", prénom: "Joseph Maurice", image: "Ravel.jpg",
+                            naissance: {jour: 7, mois: 3, année: 1875},
+                            mort: {jour: 28, mois: 12, année: 1937} 
+                        },
+                        { 
+                            nom: "Beethoven", prénom: "Ludwig van", image: "Ludwig.jpg",
+                            naissance: {jour: 17, mois: 12, année: 1770},
+                            mort: {jour: 26, mois: 3, année: 1827} 
+                        },
+                        { 
+                            nom: "Gershwin", prénom: "Jacob", image: "Gershwin.jpg",
+                            naissance: {jour: 26, mois: 9, année: 1898},
+                            mort: {jour: 11, mois: 7, année: 1937} 
+                        },
+                        {
+                            nom: "Bernstein", prénom: "Leonard", image: "LeoBernstein.jpg",
+                            naissance: {jour: 25, mois: 8, année: 1918},
+                            mort: {jour: 14, mois: 10, année: 1990} 
+                        },
+            ];
+            let mois = ["janvier", "février", "mars", "avril", "mai", "juin","juillet", "août", "setpembre", "octobre", "novembre", "decembre"];
+            for(artiste of musiciens)
+                document.write(`
+                        <div class="portrait">
+                            <h1>${artiste.nom}</h1>
+                            <h2>${artiste.prénom}</h2>
+                            <img src="img/${artiste.nom}.jpg">
+                            <em>${affichageDate(artiste.naissance)}</em>
+                            <em> - </em>
+                            <em>${affichageDate(artiste.mort)}</em>
+                        </div>
+                `);
+
+            function affichageDate(date){
+                return `${date.jour} ${mois[(date.mois-1)]} ${date.année}`;
+            }
+        </script>
+    </body>
+</html>
