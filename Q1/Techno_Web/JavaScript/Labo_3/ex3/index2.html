@@ -121,16 +121,34 @@
             function enregistrementsCours(tableauEtudiants){
                 tabCours = [];
                 for(let etudiant of tableauEtudiants)
-                    for(let cours in etudiant.cotes)
-                        tabCours[cours] = 0;
+                    for(let coursSuivi in etudiant.cotes)
+                        if(!tabCours.find(element => element.nomCours === coursSuivi))
+                            tabCours.push({nomCours : coursSuivi, somme : 0, nbCotes : 0}); 
+                triage();
+            }
+
+            function triage(){
+                let iCours = 0;
+                while(iCours != tabCours.length){
+                    if( (iCours + 1) < tabCours.length && tabCours[iCours+1].nomCours < tabCours[iCours].nomCours){
+                        let intermediaire = tabCours[iCours].nomCours;
+                        tabCours[iCours].nomCours = tabCours[iCours+1].nomCours;
+                        tabCours[iCours+1].nomCours = intermediaire;
+                        iCours = 0;
+                    }else
+                        iCours ++
+                } // A optimiser !
+            }
+
+            function checkCoursSuivi(coursSuivi){
+                return tabCours.cours == coursSuivi;
             }
 
             function afficherLigneTitre(){
                 let ligne = "";
-                for(let element in tabCours){
-                    ligne += `<th>${nomCours[element]}</th>`;
+                for(cours of tabCours){
+                    ligne += `<th>${nomCours[cours.nomCours]}</th>`;
                 }
-                    
                 return ligne;
             }
 
@@ -149,11 +167,13 @@
 
             function ligneCoteCours(etudiant){
                 let ligneCotes = "";
-                for(let cours in tabCours){
-                    let noteExiste = etudiant.cotes[cours] !== undefined;
-                    if(noteExiste)
-                        tabCours[cours] += 1000 + etudiant.cotes[cours]; 
-                    let note = noteExiste ? etudiant.cotes[cours] : ``;
+                for(let cours of tabCours){
+                    let noteExiste = etudiant.cotes[cours.nomCours] !== undefined;
+                    if(noteExiste){
+                        cours.somme += etudiant.cotes[cours.nomCours];
+                        cours.nbCotes ++;
+                    }
+                    let note = noteExiste ? etudiant.cotes[cours.nomCours] : ``;
                     ligneCotes += insererClasseNote(note);
                 }
                 return ligneCotes;
@@ -161,10 +181,8 @@
 
             function ligneMoyenne(){
                 let ligne = "";
-                for(let note in tabCours){ // problème avec la boucel for_of 
-                    let diviseur = Math.floor(tabCours[note]/1000);
-                    let dividande = Math.floor(tabCours[note]%1000)
-                    ligne += insererClasseNote(Math.round(dividande/diviseur));
+                for(let cours of tabCours){ 
+                    ligne += insererClasseNote(Math.round(cours.somme / cours.nbCotes));
                 }
                 return ligne;      
             }
