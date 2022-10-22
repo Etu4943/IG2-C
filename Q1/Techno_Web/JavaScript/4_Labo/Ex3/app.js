@@ -17,8 +17,6 @@ Number.prototype.afficheEtoiles = function (){
         ligne += "*";
     }
     console.log(ligne);
-
-    // console.log("*".repeat(this));
 };
 
 String.prototype.begaie = function(){
@@ -44,10 +42,15 @@ function introduce(prenom){
 Array.prototype.somme = function(){
     let somme = 0;
     for(let element of this){
-        somme += isFinite(element) ? element : 0;
+        somme += typeof(element) === 'number' ? element : 0;
     }
     console.log(somme);
 }
 
 let tableau = [1,4,6,4,"Clement", 5];
 
+Array.prototype.ajouteSiPasPresent = function(element){
+    if(!this.includes(element))
+        this.push(element);
+    console.log(`Resultat : ${this}`);
+}
