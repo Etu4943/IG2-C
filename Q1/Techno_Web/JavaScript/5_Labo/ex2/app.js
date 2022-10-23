@@ -57,9 +57,12 @@ window.onload = function () {
 function ajouteSaga(titre, ...episodes){
     let titre_saga = document.createElement("h2");
     titre_saga.innerText = titre;
+    titre_saga.addEventListener("click", toggleVisListe);
     cadre.appendChild(titre_saga);
 
     let liste = document.createElement("ul");
+    liste.className = "saga";
+    liste.style.display = "none";
     let item_liste;
 
     for(volet in episodes){
@@ -68,4 +71,19 @@ function ajouteSaga(titre, ...episodes){
         liste.appendChild(item_liste);
     }
     cadre.appendChild(liste);
+}
+
+
+function toggleVisListe(){
+    
+    let estVisible = this.classList.contains("contenu-visible");
+    if(estVisible){
+        this.nextElementSibling.style.display = "none";
+        this.classList.remove("contenu-visible");
+        this.style.borderRadius = "8px";
+    }else{
+        this.nextElementSibling.style.display = "";
+        this.className = "contenu-visible";
+        this.style.borderRadius = "8px 8px 0px 0px";
+    }
 }
