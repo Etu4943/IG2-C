@@ -79,11 +79,10 @@ function toggleVisListe(){
     let estVisible = this.classList.contains("contenu-visible");
     if(estVisible){
         this.nextElementSibling.style.display = "none";
-        this.classList.remove("contenu-visible");
         this.style.borderRadius = "8px";
     }else{
-        this.nextElementSibling.style.display = "";
-        this.className = "contenu-visible";
+        this.nextElementSibling.style.display = "block";
         this.style.borderRadius = "8px 8px 0px 0px";
     }
+    this.classList.toggle("contenu-visible");
 }
