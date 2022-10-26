@@ -8,23 +8,12 @@ function init(){
 
 function clic(numBloc){
     if(numBloc != grandActuel){
-        let width_futur_grand = 30;
-        let width_futur_petit = 490;
-        loop(width_futur_grand,width_futur_petit,numBloc);
+        for(let i = 0 ; i < 49 ; i ++){
+            setTimeout(modWidth,10*i,grandActuel,500-(10*i));
+            setTimeout(modWidth,10*i,numBloc,20+(10*i));
+        }
+        grandActuel = numBloc;
     }
-}
-
-function loop(width_futur_grand,width_futur_petit,numBloc){
-    setTimeout(() => {
-        if(width_futur_grand <= 500){
-            modWidth(grandActuel,width_futur_petit);
-            modWidth(numBloc,width_futur_grand);
-            width_futur_grand += 10;
-            width_futur_petit -= 10;
-            loop(width_futur_grand,width_futur_petit,numBloc);
-        } else
-            grandActuel = numBloc;
-    },100);
 }
 
 function modWidth(numBloc,size){
