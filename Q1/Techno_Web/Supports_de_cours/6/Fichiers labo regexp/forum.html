@@ -86,7 +86,31 @@
 		}
 
 		function texteEnHTML(texte) {
-			// à définir
+			let bbcodes = [
+				{
+					regEx : new RegExp(/\[b](.*?)\[\/b]/,'g'),
+					replacer : `<b>$1</b>`
+				},
+				{
+					regEx : new RegExp(/\[i](.*?)\[\/i]/,'g'),
+					replacer : `<i>$1</i>`
+				},
+				{
+					regEx : new RegExp(/\[url](.*?)\[\/url]/,'g'),
+					replacer : `<a href=$1>$1</a>`
+				},
+				{
+					regEx : new RegExp(/\[url=(.*?)].*?\[\/url]/,'g'),
+					replacer : '<a href=$1>$1</a>'
+				},
+				{
+					regEx : new RegExp(/\\"(.*)\\"/,'g'),
+					replacer : `<span class="parole">$1</span>`
+				},
+			];
+			for(let code of bbcodes){
+				texte = texte.replace(code.regEx,code.replacer);
+			}
 			return texte;
 		}
 	</script>
