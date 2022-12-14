@@ -1,0 +1,15 @@
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\bin\Debug\net6.0\Labo3.exe
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\bin\Debug\net6.0\Labo3.deps.json
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\bin\Debug\net6.0\Labo3.runtimeconfig.json
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\bin\Debug\net6.0\Labo3.dll
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\bin\Debug\net6.0\Labo3.pdb
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\obj\Debug\net6.0\Labo3.csproj.AssemblyReference.cache
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\obj\Debug\net6.0\Labo3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\obj\Debug\net6.0\Labo3.AssemblyInfoInputs.cache
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\obj\Debug\net6.0\Labo3.AssemblyInfo.cs
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\obj\Debug\net6.0\Labo3.csproj.CoreCompileInputs.cache
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\obj\Debug\net6.0\Labo3.dll
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\obj\Debug\net6.0\refint\Labo3.dll
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\obj\Debug\net6.0\Labo3.pdb
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\obj\Debug\net6.0\Labo3.genruntimeconfig.cache
+C:\Users\Etu43438\Desktop\IG2-C\Q1\C#\Code\Labo3\Labo3\obj\Debug\net6.0\ref\Labo3.dll
