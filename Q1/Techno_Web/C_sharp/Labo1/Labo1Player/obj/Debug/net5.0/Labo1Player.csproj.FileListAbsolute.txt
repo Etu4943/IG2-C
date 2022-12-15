@@ -1,0 +1,15 @@
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/bin/Debug/net5.0/Labo1Player.deps.json
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/bin/Debug/net5.0/Labo1Player.runtimeconfig.json
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/bin/Debug/net5.0/Labo1Player.runtimeconfig.dev.json
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/bin/Debug/net5.0/Labo1Player.dll
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/bin/Debug/net5.0/ref/Labo1Player.dll
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/bin/Debug/net5.0/Labo1Player.pdb
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/obj/Debug/net5.0/Labo1Player.csproj.AssemblyReference.cache
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/obj/Debug/net5.0/Labo1Player.GeneratedMSBuildEditorConfig.editorconfig
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/obj/Debug/net5.0/Labo1Player.AssemblyInfoInputs.cache
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/obj/Debug/net5.0/Labo1Player.AssemblyInfo.cs
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/obj/Debug/net5.0/Labo1Player.csproj.CoreCompileInputs.cache
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/obj/Debug/net5.0/Labo1Player.dll
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/obj/Debug/net5.0/ref/Labo1Player.dll
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/obj/Debug/net5.0/Labo1Player.pdb
+/Users/clementpotier/Downloads/test/IG2-C/Q1/Techno_Web/C_sharp/Labo1/Labo1Player/obj/Debug/net5.0/Labo1Player.genruntimeconfig.cache
