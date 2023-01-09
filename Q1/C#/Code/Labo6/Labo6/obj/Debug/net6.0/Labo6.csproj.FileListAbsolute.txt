@@ -1,0 +1,15 @@
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\bin\Debug\net6.0\Labo6.exe
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\bin\Debug\net6.0\Labo6.deps.json
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\bin\Debug\net6.0\Labo6.runtimeconfig.json
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\bin\Debug\net6.0\Labo6.dll
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\bin\Debug\net6.0\Labo6.pdb
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\obj\Debug\net6.0\Labo6.csproj.AssemblyReference.cache
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\obj\Debug\net6.0\Labo6.GeneratedMSBuildEditorConfig.editorconfig
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\obj\Debug\net6.0\Labo6.AssemblyInfoInputs.cache
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\obj\Debug\net6.0\Labo6.AssemblyInfo.cs
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\obj\Debug\net6.0\Labo6.csproj.CoreCompileInputs.cache
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\obj\Debug\net6.0\Labo6.dll
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\obj\Debug\net6.0\refint\Labo6.dll
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\obj\Debug\net6.0\Labo6.pdb
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\obj\Debug\net6.0\Labo6.genruntimeconfig.cache
+D:\Henallux\IG2-C\Q1\C#\Code\Labo6\Labo6\obj\Debug\net6.0\ref\Labo6.dll
