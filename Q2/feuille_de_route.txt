@@ -1,0 +1,11 @@
+Lundi 6/02/23 : 
+	- Réseau : 
+		--> Introduction + potentielle présentation du cours + LAN / WAN
+		--> Création d'une entreprise de carte mère basée à Charleroi + Chicoutimi (CA)
+		--> Insiste sur le SWITCH qui représente une LAN et le ROUTEUR qui représente le WAN
+	
+	- Analyse Orienté Object :
+		--> Intro du cours
+		--> Présentation et explication du projet à l'année (groupe de 5)
+
+	- Droit : ❌ Prof Absent
