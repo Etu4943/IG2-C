@@ -9,3 +9,10 @@ Lundi 6/02/23 :
 		--> Présentation et explication du projet à l'année (groupe de 5)
 
 	- Droit : ❌ Prof Absent
+
+Mardi 7/02/23 : 
+	- Progra to Data :
+		--> Introduction au cours + introduction au projet
+
+	- Java : 
+		--> Introduction, rappel
