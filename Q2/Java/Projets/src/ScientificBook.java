@@ -25,4 +25,8 @@ public class ScientificBook extends Book{
     public static ArrayList<ScientificBook> getInstancesList() {
         return instancesList;
     }
+
+    public static int getScientificBooksNb(){
+        return instancesList.size();
+    }
 }
