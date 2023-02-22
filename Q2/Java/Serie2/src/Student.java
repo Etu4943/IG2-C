@@ -3,10 +3,15 @@ import Exceptions.SectionException;
 import Exceptions.YearNumberException;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Student extends Person{
     private String sectionName;
     private int studyYearNumber;
+
+    private static int MAX_SIZE = 20;
+
+    private LearningActivity[] learningActivities;
     private static int womanCount;
 
     public Student(String firstname, String lastname, char gender, LocalDate birthdate, String sectionName, int studyYearNumber) throws GenderException, SectionException, YearNumberException {
@@ -15,6 +20,7 @@ public class Student extends Person{
         setStudyYearNumber(studyYearNumber);
         if(gender == 'w')
             womanCount += 1;
+        learningActivities = new LearningActivity[MAX_SIZE];
     }
 
     public void setSectionName(String sectionName) throws SectionException{
@@ -62,5 +68,25 @@ public class Student extends Person{
 
     public static int getWomanCount() {
         return womanCount;
+    }
+
+    public int activitiesNB(){
+        int compteur = 0;
+        while(learningActivities[compteur] != null && compteur < MAX_SIZE){
+            compteur ++;
+        }
+        return compteur;
+    }
+
+    public void addLearningActivity(LearningActivity learningActivity){
+        int compteur = 0;
+        while(learningActivities[compteur] != null && compteur < MAX_SIZE){
+            compteur ++;
+        }
+        learningActivities[compteur] = learningActivity;
+    }
+
+    public LearningActivity getLearningActivities(int indice){
+        return learningActivities[indice];
     }
 }

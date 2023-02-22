@@ -3,7 +3,9 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <string.h>
+
 int pidP, pid1, pid2;
+
 void fils1(void){
 	/* Dans le fils 1 */
 	int i;
@@ -16,6 +18,7 @@ void fils1(void){
 	printf("PID %d - Fin du premier fils\n", pid1);
 	exit(EXIT_SUCCESS);
 }
+
 void fils2(void){
 	/* Dans le fils 2 */
 	int i;
@@ -28,6 +31,7 @@ void fils2(void){
 	printf("PID %d - Fin du second fils\n", pid2);
 	exit(EXIT_SUCCESS);
 }
+
 void pere(void){
 	/* Dans le pere */
 	int finishedPid;
@@ -53,6 +57,7 @@ void pere(void){
 	printf("PID %d - Fin du Pere\n", pidP);
 	exit (EXIT_SUCCESS);
 }
+
 int main(void) {
 	int status;
 	pidP = getpid();
