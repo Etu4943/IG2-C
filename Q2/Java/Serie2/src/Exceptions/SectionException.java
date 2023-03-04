@@ -2,7 +2,6 @@ package Exceptions;
 
 public class SectionException extends Exception{
     private String wrongSection;
-    private static String boxTitle = "Section non accpetée";
 
     public SectionException(String wrongSection, String message) {
         super(message);
@@ -17,7 +16,4 @@ public class SectionException extends Exception{
         return wrongSection;
     }
 
-    public static String getBoxTitle() {
-        return boxTitle;
-    }
 }

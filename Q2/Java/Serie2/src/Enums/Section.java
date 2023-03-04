@@ -1,5 +1,6 @@
 package Enums;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public enum Section {
@@ -26,11 +27,12 @@ public enum Section {
         return list;
     }
 
-    public static boolean contains(String origin){
+    public static boolean contains(Section origin){
         for(Section value : values()){
-            if(origin.equals(value.getName()))
+            if(value == origin)
                 return true;
         }
         return false;
     }
+
 }

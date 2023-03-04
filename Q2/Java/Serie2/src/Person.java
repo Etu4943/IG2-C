@@ -2,23 +2,24 @@ import Exceptions.GenderException;
 
 import java.time.LocalDate;
 import java.time.Period;
+import Enums.*;
 
 public class Person {
     private String firstname;
     private String lastname;
-    private char gender;
+    private Gender gender;
     private LocalDate birthdate;
 
-    public Person(String firstname, String lastname, char gender, LocalDate birthdate) throws GenderException {
+    public Person(String firstname, String lastname, Gender gender, LocalDate birthdate) throws GenderException {
         this.firstname = firstname;
         this.lastname = lastname;
         setGender(gender);
         this.birthdate = birthdate;
     }
 
-    public void setGender(char gender) throws GenderException{
-        if(gender != 'm'&& gender != 'w' && gender != 'x') {
-            throw new GenderException(gender, "Wrong value for gender");
+    public void setGender(Gender gender) throws GenderException{
+        if(!Enums.Gender.contains(gender)) {
+            throw new GenderException(gender.getGender(), "Wrong value for gender");
         }
         this.gender = gender;
     }

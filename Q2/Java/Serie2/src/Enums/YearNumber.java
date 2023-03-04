@@ -1,29 +1,32 @@
 package Enums;
 
-import java.util.ArrayList;
+import javax.swing.*;
 
 public enum YearNumber {
     ONE(1),
     TWO(2),
     THREE(3);
+
+    YearNumber(int yearNumber) {
+        this.yearNumber = yearNumber;
+    }
+
     private int yearNumber;
 
     public int getYearNumber() {
         return yearNumber;
     }
 
-    YearNumber(int yearNumber) {
-        this.yearNumber = yearNumber;
-    }
 
-
-    public static boolean contains(Integer origin){
+    public static boolean contains(YearNumber origin){
         for(YearNumber value : values()){
-            if(origin.equals(value.getYearNumber()))
+            if(origin == value)
                 return true;
         }
         return false;
     }
+
+
 
 
 }

@@ -3,8 +3,6 @@ package Exceptions;
 public class YearNumberException extends Exception{
     int wrongYear;
 
-    private static String boxTitle = "Année d'inscription non accpetée";
-
     public YearNumberException(int wrongYear, String message) {
         super(message);
         setWrongYear(wrongYear);
@@ -18,7 +16,4 @@ public class YearNumberException extends Exception{
         return wrongYear;
     }
 
-    public static String getBoxTitle() {
-        return boxTitle;
-    }
 }
